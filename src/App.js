@@ -19,8 +19,8 @@ function App() {
 					<input type="password" class="form-control" id="password-sign-in"/>
 				</div>
 				<div class="mb-3 form-check">
-					<input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-					<label class="form-check-label" htmlFor="exampleCheck1">Remember My Password</label>
+					<input type="checkbox" class="form-check-input" id="checkbox-sign-in"/>
+					<label class="form-check-label" htmlFor="checkbox-sign-in">Remember My Password</label>
 				</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
