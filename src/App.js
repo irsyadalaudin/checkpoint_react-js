@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div class="App">
+			<nav class="navbar navbar-light bg-primary mb-4">
+					<h1 class="navbar-brand mx-auto">Bootstrap Sign in</h1>
+			</nav>
+
+			<form class="mx-auto w-50">
+				<div class="mb-3">
+					<label for="email-sign-in" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email-sign-in"/>
+				</div>
+				<div class="mb-3">
+					<label for="password-sign-in" class="form-label">Password</label>
+					<input type="password" class="form-control" id="password-sign-in"/>
+				</div>
+				<div class="mb-3 form-check">
+					<input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+					<label class="form-check-label" htmlFor="exampleCheck1">Remember My Password</label>
+				</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	);
 }
 
 export default App;
