@@ -1,3 +1,7 @@
+.container {
+	height: 600px;
+}
+
 .left {
 	margin-left: 100px;
 }

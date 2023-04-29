@@ -5,19 +5,24 @@ import {useState} from 'react';
 
 function App() {
 	const [showSignIn, setShowSignIn] = useState(true);
+	const [disableSignUp, setDisableSignUp] = useState(false);
 
 	const handleToggleSignIn = () => {
 		setShowSignIn(true);
+		setDisableSignUp(false);
+		document.querySelector('#sign-in-btn').disabled = true;
 	};
 
 	const handleToggleSignUp = () => {
 		setShowSignIn(false);
+		setDisableSignUp(true);
+		document.querySelector('#sign-up-btn').disabled = true;
 	};
 
 	return (
 		<div class='App'>
 
-			<div class='w-75 h-75 mt-5 m-auto d-flex justify-content-center bg-secondary text-white rounded-4'>
+			<div class='container w-75 mt-5 m-auto d-flex justify-content-center bg-secondary text-white rounded-4'>
 			
 				{/* OPENING ROW */}
 				<div class ='row align-items-center gx-0'>
@@ -30,8 +35,8 @@ function App() {
 
 							<form class='w-75 mt-5 mb-5' id='showSignIn'  style={{ display: showSignIn ? 'block' : 'none' }}>
 								<div class='d-flex justify-content-center'>
-									<button type='button' class='btn btn-warning btn-sm mb-3 me-3' onClick={handleToggleSignIn}>sign in</button>
-									<button type='button' class='btn btn-warning btn-sm mb-3' onClick={handleToggleSignUp}>sign up</button>
+									<button type='button' class='btn btn-warning btn-sm mb-3 me-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>
+									<button type='button' class='btn btn-warning btn-sm mb-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>
 								</div>
 
 								<div class='mb-3'>
@@ -52,8 +57,8 @@ function App() {
 						<div class='d-flex justify-content-center left'>
 							<form class='w-75 mt-5 mb-5' style={{ display: showSignIn ? 'none' : 'block' }}>
 								<div class='d-flex justify-content-center'>
-									<button type='button' class='btn btn-warning btn-sm mb-3 me-3' onClick={handleToggleSignIn}>sign in</button>
-									<button type='button' class='btn btn-warning btn-sm mb-3' onClick={handleToggleSignUp}>sign up</button>
+									<button type='button' class='btn btn-warning btn-sm mb-3 me-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>
+									<button type='button' class='btn btn-warning btn-sm mb-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>
 								</div>
 
 								<div class='mb-3'>
