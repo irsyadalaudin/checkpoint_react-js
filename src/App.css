@@ -1,21 +1,9 @@
-/* .row {
-	max-width: 800px;
-	margin: 0 auto;
-	position: relative;
-} */
-
-
-/* .container-fluid {
-	margin: 0;
-	padding: 0;
-} */
-
 .left {
-	margin-left: 250px;
+	margin-left: 100px;
 }
 
-#checkbox-sign-in {
-	background-color: darkgoldenrod;
+.form-check-input[type="checkbox"]:checked {
+	background-color: #FFC107;
 }
 
 .right {
@@ -23,7 +11,7 @@
 	margin-right: 100px;
 }
 
-/* #office-img {
-	width: 300px;
-	height: 300px;
-} */
+.btn-active {
+	background-color: red;
+	color: #fff;
+}
