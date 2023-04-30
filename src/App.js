@@ -9,17 +9,17 @@ function App() {														// `App` COMPONENT DECLARATION
 
 	const handleToggleSignIn = () => {									// DEFINE A FUNCTION FOR HANDLING THE `sign in` BUTTON CLICK EVENT
 		setShowSignIn(true);											// SET THE `state` VARIABLE FOR `showing/hiding` THE `sign in` FORM TO `true`
-		setDisableSignUp(false);										// SET THE `state` VARIABLE FOR `disabling/enabling`
-		document.querySelector('#sign-in-btn').disabled = true;
+		setDisableSignUp(false);										// SET THE `state` VARIABLE FOR `disabling/enabling` THE `sign up` BUTTON TO `false`
+		document.querySelector('#sign-in-btn').disabled = true;			// DISABLE THE `sign in` BUTTON
 	};
 
-	const handleToggleSignUp = () => {
-		setShowSignIn(false);
-		setDisableSignUp(true);
-		document.querySelector('#sign-up-btn').disabled = true;
+	const handleToggleSignUp = () => {									// DEFINE A FUNCTION FOR HANDLING THE `sign up` BUTTON CLICK EVENT
+		setShowSignIn(false);											// SET THE `state` VARIABLE FOR `showing/hiding` THE `sign in` FORM TO `false`
+		setDisableSignUp(true);											// SET THE `state` VARIABLE FOR `disabling/enabling` THE `sign up` BUTTON TO `true`
+		document.querySelector('#sign-up-btn').disabled = true;			// DISABLE THE `sign up` BUTTON
 	};
 
-	return (
+	return (															// RETURN THE JSX CODE
 		<div class='App wrapper w-75 mt-5 m-auto d-flex justify-content-center bg-secondary text-white rounded-4'>
 			
 				{/* OPENING ROW */}
@@ -33,8 +33,8 @@ function App() {														// `App` COMPONENT DECLARATION
 
 							<form class='w-75 mt-5 mb-5' id='showSignIn'  style={{ display: showSignIn ? 'block' : 'none' }}>
 								<div class='btn-container d-flex justify-content-center mx-auto mb-3'>
-									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-start-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>
-									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-end-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>
+									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-start-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>	{/* EVENT HANDLERS FOR `sign in` BUTTON ELEMENT */}
+									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-end-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>					{/* EVENT HANDLERS FOR `sign up` BUTTON ELEMENT */}
 								</div>
 
 								<div class='mb-3'>
@@ -55,8 +55,8 @@ function App() {														// `App` COMPONENT DECLARATION
 						<div class='d-flex justify-content-center left'>
 							<form class='w-75 mt-5 mb-5' style={{ display: showSignIn ? 'none' : 'block' }}>
 								<div class='btn-container d-flex justify-content-center mx-auto mb-3'>
-									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-start-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>
-									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-end-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>
+									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-start-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>	{/* EVENT HANDLERS FOR `sign in` BUTTON ELEMENT */}
+									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-end-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>					{/* EVENT HANDLERS FOR `sign up` BUTTON ELEMENT */}
 								</div>
 
 								<div class='mb-3'>
@@ -77,7 +77,7 @@ function App() {														// `App` COMPONENT DECLARATION
 					{/* RIGHT COLUMN */}
 					<div class='col' id='right-column'>
 						<div class='d-flex justify-content-center right pb-4'>
-							<img src={image} alt='office-img' class='w-100' id='office-img'/>
+							<img src={image} alt='office-img' class='w-100' id='office-img'/>		{/* `image` ELEMENT, WHICH IS PASSED AS A PROP TO THIS ELEMENT */}
 						</div>
 					</div>
 
