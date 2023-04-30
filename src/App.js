@@ -1,15 +1,15 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import image from './img/office.png';
-import {useState} from 'react';
+import './App.css';														// IMPORTING `CSS` FILE
+import 'bootstrap/dist/css/bootstrap.min.css'							// IMPORTING `bootstrap` FILE
+import image from './img/office.png';									// IMPORTING AN `image` FILE
+import {useState} from 'react';											// IMPORTING THE `useState` HOOK FROM THE REACT LIBRARY
 
-function App() {
-	const [showSignIn, setShowSignIn] = useState(true);
-	const [disableSignUp, setDisableSignUp] = useState(false);
+function App() {														// `App` COMPONENT DECLARATION
+	const [showSignIn, setShowSignIn] = useState(true);					// DECLARE AND INITIALIZE A `state` VARIABLE AND A `setter` FUNCTION FOR `showing/hiding` THE `sign in` FORM
+	const [disableSignUp, setDisableSignUp] = useState(false);			// DECLARE AND INITIALIZE A `state` VARIABLE AND A `setter` FUNCTION FOR `disabling/enabling` THE `sign in` FORM
 
-	const handleToggleSignIn = () => {
-		setShowSignIn(true);
-		setDisableSignUp(false);
+	const handleToggleSignIn = () => {									// DEFINE A FUNCTION FOR HANDLING THE `sign in` BUTTON CLICK EVENT
+		setShowSignIn(true);											// SET THE `state` VARIABLE FOR `showing/hiding` THE `sign in` FORM TO `true`
+		setDisableSignUp(false);										// SET THE `state` VARIABLE FOR `disabling/enabling`
 		document.querySelector('#sign-in-btn').disabled = true;
 	};
 
@@ -20,23 +20,21 @@ function App() {
 	};
 
 	return (
-		<div class='App'>
-
-			<div class='container w-75 mt-5 m-auto d-flex justify-content-center bg-secondary text-white rounded-4'>
+		<div class='App wrapper w-75 mt-5 m-auto d-flex justify-content-center bg-secondary text-white rounded-4'>
 			
 				{/* OPENING ROW */}
 				<div class ='row align-items-center gx-0'>
 
 					{/* LEFT COLUMN */}
-					<div class='col'> {/* border jangan lupa dihapus */}
+					<div class='col'>
 
 						{/* SIGN IN */}
 						<div class='d-flex justify-content-center left'>
 
 							<form class='w-75 mt-5 mb-5' id='showSignIn'  style={{ display: showSignIn ? 'block' : 'none' }}>
-								<div class='d-flex justify-content-center'>
-									<button type='button' class='btn btn-warning btn-sm mb-3 me-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>
-									<button type='button' class='btn btn-warning btn-sm mb-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>
+								<div class='btn-container d-flex justify-content-center mx-auto mb-3'>
+									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-start-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>
+									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-end-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>
 								</div>
 
 								<div class='mb-3'>
@@ -56,9 +54,9 @@ function App() {
 						{/* SIGN UP */}
 						<div class='d-flex justify-content-center left'>
 							<form class='w-75 mt-5 mb-5' style={{ display: showSignIn ? 'none' : 'block' }}>
-								<div class='d-flex justify-content-center'>
-									<button type='button' class='btn btn-warning btn-sm mb-3 me-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>
-									<button type='button' class='btn btn-warning btn-sm mb-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>
+								<div class='btn-container d-flex justify-content-center mx-auto mb-3'>
+									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-start-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>
+									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-end-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>
 								</div>
 
 								<div class='mb-3'>
@@ -77,14 +75,13 @@ function App() {
 					</div> {/* CLOSING LEFT COLUMN */}
 
 					{/* RIGHT COLUMN */}
-					<div class='col' id='right-column'>  {/* border jangan lupa dihapus */}
+					<div class='col' id='right-column'>
 						<div class='d-flex justify-content-center right pb-4'>
 							<img src={image} alt='office-img' class='w-100' id='office-img'/>
 						</div>
 					</div>
 
 				</div> {/* CLOSING ROW*/}
-			</div>
 		</div>
 	);
 }

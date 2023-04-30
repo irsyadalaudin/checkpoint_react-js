@@ -1,9 +1,13 @@
-.container {
+.wrapper {
 	height: 600px;
 }
 
 .left {
 	margin-left: 100px;
+}
+
+.btn-container {
+	width: 35%;
 }
 
 .form-check-input[type="checkbox"]:checked {
