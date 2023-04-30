@@ -47,7 +47,7 @@ function App() {														// `App` COMPONENT DECLARATION
 									<input type='checkbox' class='form-check-input' id='checkbox-sign-in'/>
 									<label class='form-check-label' htmlFor='checkbox-sign-in'>Remember My Password</label>
 								</div>
-									<button type='submit' class='btn btn-warning'>Submit</button>
+								<button type='submit' class='btn btn-warning'>Submit</button>
 							</form>
 						</div>
 
@@ -68,7 +68,10 @@ function App() {														// `App` COMPONENT DECLARATION
 								<div class='mb-3'>
 									<input type='password' class='form-control' id='password-sign-up' placeholder='Password'/>
 								</div>
-									<button type='submit' class='btn btn-warning'>Submit</button>
+								<div class='mb-3'>
+									<input type='password' class='form-control' id='password-sign-up' placeholder='Repeat your Password'/>
+								</div>
+								<button type='submit' class='btn btn-warning'>Submit</button>
 							</form>
 						</div>
 
