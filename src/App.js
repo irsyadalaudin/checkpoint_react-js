@@ -32,7 +32,7 @@ function App() {														// `App` COMPONENT DECLARATION
 						<div class='d-flex justify-content-center left'>
 
 							<form class='w-75 mt-5 mb-5' id='showSignIn'  style={{ display: showSignIn ? 'block' : 'none' }}>
-								<div class='btn-container d-flex justify-content-center mx-auto mb-3'>
+								<div class='btn-container d-flex justify-content-center mx-auto mb-3' style={{ width: '200px' }}>
 									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-start-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>	{/* EVENT HANDLERS FOR `sign in` BUTTON ELEMENT */}
 									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-end-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>					{/* EVENT HANDLERS FOR `sign up` BUTTON ELEMENT */}
 								</div>
@@ -54,7 +54,7 @@ function App() {														// `App` COMPONENT DECLARATION
 						{/* SIGN UP */}
 						<div class='d-flex justify-content-center left'>
 							<form class='w-75 mt-5 mb-5' style={{ display: showSignIn ? 'none' : 'block' }}>
-								<div class='btn-container d-flex justify-content-center mx-auto mb-3'>
+								<div class='btn-container d-flex justify-content-center mx-auto mb-3' style={{ width: '200px' }}>
 									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-start-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>	{/* EVENT HANDLERS FOR `sign in` BUTTON ELEMENT */}
 									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-end-3' id='sign-up-btn' onClick={handleToggleSignUp} disabled={disableSignUp}>sign up</button>					{/* EVENT HANDLERS FOR `sign up` BUTTON ELEMENT */}
 								</div>
