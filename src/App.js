@@ -30,7 +30,6 @@ function App() {														// `App` COMPONENT DECLARATION
 
 						{/* SIGN IN */}
 						<div class='d-flex justify-content-center left'>
-
 							<form class='w-75 mt-5 mb-5' id='showSignIn'  style={{ display: showSignIn ? 'block' : 'none' }}>
 								<div class='btn-container d-flex justify-content-center mx-auto mb-3' style={{ width: '200px' }}>
 									<button type='button' class='btn btn-warning btn-sm d-flex align-items-center rounded-0 rounded-start-3' id='sign-in-btn' onClick={handleToggleSignIn} disabled={showSignIn ? true : false}>sign in</button>	{/* EVENT HANDLERS FOR `sign in` BUTTON ELEMENT */}
