@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'							// IMPORTING `bootstrap` FIL
 import image from './img/office.png';									// IMPORTING AN `image` FILE
 import {useState} from 'react';											// IMPORTING THE `useState` HOOK FROM THE REACT LIBRARY
 
-function App() {														// `App` COMPONENT DECLARATION
+const App = () => {														// `App` COMPONENT DECLARATION
 	const [showSignIn, setShowSignIn] = useState(true);					// DECLARE AND INITIALIZE A `state` VARIABLE AND A `setter` FUNCTION FOR `showing/hiding` THE `sign in` FORM
 	const [disableSignUp, setDisableSignUp] = useState(false);			// DECLARE AND INITIALIZE A `state` VARIABLE AND A `setter` FUNCTION FOR `disabling/enabling` THE `sign in` FORM
 
